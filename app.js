@@ -33,9 +33,9 @@ app.use(xssClean());
 
 
 // routes
-// app.get('/', (req, res) => {
-//   res.send('jobs api');
-// });
+app.get('/', (req, res) => {
+  res.send('jobs api');
+});
 
 app.use('/api/v1/jobs',authenticateUser,jobsRouter)
 app.use('/api/v1/auth',authRouter)
